@@ -1,0 +1,43 @@
+.card {
+    height: 170px;
+    width: 90%;
+    background-color: #14191e;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #000, 2px 2px 20px #000;
+    position: relative;
+    cursor: pointer;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.card h1 {
+    background: linear-gradient(to right, #46b6ce, #fff);
+    color: transparent;
+    background-clip: text;
+}
+.card:hover {
+    box-shadow: 2px 2px 10px #46b6ce, 2px 2px 20px #46b6ce;
+}
+.hover-card {
+    position: absolute;
+    transform: translateY(100%);
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+    background: linear-gradient(to top, #46b5ce5e, #14191e59);
+    backdrop-filter: blur(7px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hover-card img{
+   height: 80%;
+}
+.card:hover .hover-card {
+    transform: translateY(0);
+
+}

@@ -1,0 +1,106 @@
+nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #111417;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+}
+nav h1 {
+    font-size: 30px;
+    background: linear-gradient(to right, #46b6ce, #fff);
+    color: transparent;
+    background-clip: text;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+nav ul a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul a:hover {
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    color: #25a5a5;
+}
+a.act {
+  text-decoration: underline;
+  color: rgb(37, 165, 165);
+  text-underline-offset: 7px;
+}
+.desktop-menu {
+    display: none;
+}
+.hamburger {
+  width: 30px;
+  height: 30px;
+  /* display: flex;
+  gap: 8px;
+  flex-direction: column ; */
+  transform: rotate(0);
+  transition: all 0.3s ease-in-out;
+}
+.hamburger.active-ham  {
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+}
+.hamburger .ham{  
+  width: 30px;
+  height: 3px;
+  display: block;
+  margin: 8px auto;
+  background-color: #ecf0f1;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger:hover{
+  cursor: pointer; 
+}
+.mobile-menu {
+    transform: translateX(100%);
+    position: absolute;
+    top: 80px;
+    background-color: #11141757;
+    height: 100vh;
+    width: 100%;
+    gap: 40px;
+    backdrop-filter: blur(7px);
+    transition: all 0.5s ease-in-out;
+    left: 0;
+    flex-direction: column;
+}
+.active-menu {
+   transform: translateX(0);
+}
+.active-ham .ham:nth-child(2) {
+  width: 0;
+}
+.active-ham .ham:nth-child(1), .active-ham .ham:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.active-ham .ham:nth-child(1) {
+  transform: translateY(11px);
+}
+.active-ham .ham:nth-child(3) {
+  transform: translateY(-11px) rotate(90deg);
+}
+@media (min-width: 750px) {
+    .desktop-menu {
+        display: flex;
+    }
+    .hamburger {
+        display: none;
+    }
+    .mobile-menu {
+        display: none;
+    }
+}
